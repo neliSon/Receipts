@@ -7,8 +7,12 @@
 //
 
 #import "NewReceiptViewController.h"
+#import "CatagoryTableViewCell.h"
 
-@interface NewReceiptViewController ()
+@interface NewReceiptViewController () <UITableViewDataSource, UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *amountTextField;
+@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
 
 @end
 
@@ -20,6 +24,7 @@
         _detailItem = newDetailItem;
         
         // Update the view.
+        self.tapGesture.enabled = NO;
         [self configureView];
     }
 }
@@ -51,5 +56,47 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Actions
+
+- (IBAction)cancelButton:(id)sender {
+    
+}
+
+- (IBAction)saveButton:(id)sender {
+    
+}
+
+
+//  to hide keyboard
+- (IBAction)viewWasTapped:(UITapGestureRecognizer *)sender {
+    [self hideKeyboard];
+}
+
+-(void)hideKeyboard {
+    [self.view endEditing:YES];
+    self.tapGesture.enabled = NO;
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self hideKeyboard];
+    return YES;
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    self.tapGesture.enabled = YES;
+}
+#pragma mark - TableView Protocols
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CatagoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CatagoryCell" forIndexPath:indexPath];
+    
+    return cell;
+}
+
 
 @end

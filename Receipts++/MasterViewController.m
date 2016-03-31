@@ -9,6 +9,8 @@
 #import "MasterViewController.h"
 #import "NewReceiptViewController.h"
 #import "Receipt.h"
+#import "ReceiptTableViewCell.h"
+@import CoreData;
 
 @interface MasterViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -27,22 +29,30 @@
 }
 
 
-#pragma mark - segues
+//#pragma mark - segues
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"AddReceipt"]) {
-        
-        Receipt 
-        
-        NewReceiptViewController *NRVC = [segue destinationViewController];
-        NRVC setDetailItem:<#(id)#>
-    }
-}
+
 
 #pragma mark - buttons
 
 - (IBAction)addReceiptButton:(id)sender {
     [self performSegueWithIdentifier:@"AddReceipt" sender:self];
 }
+
+#pragma mark - TableView Protocols
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ReceiptTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.receiptTitleLabel.text = @"blabla";
+    
+    return cell;
+}
+
+
 
 @end

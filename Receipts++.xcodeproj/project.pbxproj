@@ -19,7 +19,8 @@
 		1B8CEC6A1CADA5D6005447F4 /* Receipt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CEC651CADA5D6005447F4 /* Receipt+CoreDataProperties.m */; };
 		1B8CEC6B1CADA5D6005447F4 /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CEC671CADA5D6005447F4 /* Receipt.m */; };
 		1B8CEC6E1CADA7A4005447F4 /* NewReceiptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CEC6D1CADA7A4005447F4 /* NewReceiptViewController.m */; };
-		1B8CEC721CADAE71005447F4 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CEC711CADAE71005447F4 /* CoreDataStack.m */; };
+		1B8CEC751CADC3BA005447F4 /* ReceiptTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CEC741CADC3BA005447F4 /* ReceiptTableViewCell.m */; };
+		1B8CEC781CADC9E1005447F4 /* CatagoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8CEC771CADC9E1005447F4 /* CatagoryTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +45,10 @@
 		1B8CEC671CADA5D6005447F4 /* Receipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Receipt.m; path = ../Receipt.m; sourceTree = "<group>"; };
 		1B8CEC6C1CADA7A4005447F4 /* NewReceiptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewReceiptViewController.h; sourceTree = "<group>"; };
 		1B8CEC6D1CADA7A4005447F4 /* NewReceiptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewReceiptViewController.m; sourceTree = "<group>"; };
-		1B8CEC701CADAE71005447F4 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
-		1B8CEC711CADAE71005447F4 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		1B8CEC731CADC3BA005447F4 /* ReceiptTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptTableViewCell.h; sourceTree = "<group>"; };
+		1B8CEC741CADC3BA005447F4 /* ReceiptTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptTableViewCell.m; sourceTree = "<group>"; };
+		1B8CEC761CADC9E1005447F4 /* CatagoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatagoryTableViewCell.h; sourceTree = "<group>"; };
+		1B8CEC771CADC9E1005447F4 /* CatagoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatagoryTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,10 @@
 		1B8CEC5D1CADA28C005447F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1B8CEC731CADC3BA005447F4 /* ReceiptTableViewCell.h */,
+				1B8CEC741CADC3BA005447F4 /* ReceiptTableViewCell.m */,
+				1B8CEC761CADC9E1005447F4 /* CatagoryTableViewCell.h */,
+				1B8CEC771CADC9E1005447F4 /* CatagoryTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -130,8 +137,6 @@
 			children = (
 				1B8CEC451CADA258005447F4 /* AppDelegate.h */,
 				1B8CEC461CADA258005447F4 /* AppDelegate.m */,
-				1B8CEC701CADAE71005447F4 /* CoreDataStack.h */,
-				1B8CEC711CADAE71005447F4 /* CoreDataStack.m */,
 				1B8CEC6F1CADAE0C005447F4 /* NSManagedObjects */,
 			);
 			name = Model;
@@ -140,16 +145,32 @@
 		1B8CEC6F1CADAE0C005447F4 /* NSManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				1B8CEC791CADD626005447F4 /* Catagory */,
+				1B8CEC7A1CADD633005447F4 /* Receipt */,
+			);
+			name = NSManagedObjects;
+			sourceTree = "<group>";
+		};
+		1B8CEC791CADD626005447F4 /* Catagory */ = {
+			isa = PBXGroup;
+			children = (
 				1B8CEC601CADA5D6005447F4 /* Tag+CoreDataProperties.h */,
 				1B8CEC611CADA5D6005447F4 /* Tag+CoreDataProperties.m */,
 				1B8CEC621CADA5D6005447F4 /* Tag.h */,
 				1B8CEC631CADA5D6005447F4 /* Tag.m */,
+			);
+			name = Catagory;
+			sourceTree = "<group>";
+		};
+		1B8CEC7A1CADD633005447F4 /* Receipt */ = {
+			isa = PBXGroup;
+			children = (
 				1B8CEC641CADA5D6005447F4 /* Receipt+CoreDataProperties.h */,
 				1B8CEC651CADA5D6005447F4 /* Receipt+CoreDataProperties.m */,
 				1B8CEC661CADA5D6005447F4 /* Receipt.h */,
 				1B8CEC671CADA5D6005447F4 /* Receipt.m */,
 			);
-			name = NSManagedObjects;
+			name = Receipt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,13 +246,14 @@
 			files = (
 				1B8CEC6B1CADA5D6005447F4 /* Receipt.m in Sources */,
 				1B8CEC6E1CADA7A4005447F4 /* NewReceiptViewController.m in Sources */,
+				1B8CEC781CADC9E1005447F4 /* CatagoryTableViewCell.m in Sources */,
 				1B8CEC691CADA5D6005447F4 /* Tag.m in Sources */,
 				1B8CEC501CADA258005447F4 /* Receipts__.xcdatamodeld in Sources */,
 				1B8CEC6A1CADA5D6005447F4 /* Receipt+CoreDataProperties.m in Sources */,
-				1B8CEC721CADAE71005447F4 /* CoreDataStack.m in Sources */,
 				1B8CEC681CADA5D6005447F4 /* Tag+CoreDataProperties.m in Sources */,
 				1B8CEC4A1CADA258005447F4 /* MasterViewController.m in Sources */,
 				1B8CEC471CADA258005447F4 /* AppDelegate.m in Sources */,
+				1B8CEC751CADC3BA005447F4 /* ReceiptTableViewCell.m in Sources */,
 				1B8CEC441CADA258005447F4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

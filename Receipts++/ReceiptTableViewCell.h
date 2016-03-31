@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ReceiptTableViewCell.h
 //  Receipts++
 //
 //  Created by Nelson Chow on 2016-03-31.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UIViewController
-
-@property (strong, nonatomic) NSManagedObjectContext *context;
+@interface ReceiptTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *receiptTitleLabel;
 
 @end
-

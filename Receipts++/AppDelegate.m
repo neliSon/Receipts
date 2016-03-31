@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MasterViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    MasterViewController *mvc = (MasterViewController*) self.window.rootViewController;
+    mvc.context = self.managedObjectContext;
+    
     return YES;
 }
 

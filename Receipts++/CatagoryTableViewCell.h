@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CatagorieTableViewCell.h
 //  Receipts++
 //
 //  Created by Nelson Chow on 2016-03-31.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UIViewController
-
-@property (strong, nonatomic) NSManagedObjectContext *context;
+@interface CatagoryTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *catagoryLabel;
 
 @end
-
